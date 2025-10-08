@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praneel's Notepad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="notepad-container">
+    <h1 class="title">My Notepad</h1>
+    
+    <div class="toolbar">
+      <button onclick="format('bold')">Bold</button>
+      <button onclick="format('underline')">Underline</button>
+      <button onclick="formatBlock('h1')">Heading</button>
+      
+      <select onchange="changeColor(this.value)">
+        <option value="">Text Color</option>
+        <option value="white">White</option>
+        <option value="red">Red</option>
+        <option value="cyan">Cyan</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+      </select>
+
+      <button onclick="saveNote()">Save</button>
+    </div>
+    
+    <div id="editor" contenteditable="true"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
